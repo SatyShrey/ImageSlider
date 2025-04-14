@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Slider</title>
 </head>
-<body onload="bodyLoad()">
-    <main>
-        <h1>Image Slider</h1>
-        <section class="section1">
-            <div class="imgContainer">
-            </div>
-        </section>
-        <div class="nav">
-            <button class="btnNav" onclick="left()">&#10094;</button>
-            <button class="btnB" onclick="ctrl()"><span id="stp">||</span><span id="strt">&#9658;</span></button>
-            <button class="btnNav" onclick="right()">&#10095;</button>
-        </div>
-    </main>
+
+<body>
+  <h1>Image Slider</h1>
+  <main>
+    <section>
+      <div class="roll"></div>
+      <button class="prev" type="button">&#10094;</button>
+      <button class="next" type="button">&#10095;</button>
+    </section>
+  </main>
 
 
-    <script type="text/javascript" src="script.js"></script>
-
-    
+  <noscript style="color: red;margin: 10px;">Warning : Please turn on javascript to run this app</noscript>
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,103 +1,77 @@
-body{
-    background-color: black;
+*{
+  margin: 0;padding: 0;
 }
-        main{
-            width: 1000px;
-            height: 572px;
-            margin: auto;
-            border-radius: 5px;
-            box-shadow: black 2px 2px 3px;
-            background-image:linear-gradient(skyblue,purple) ;
-        }
-        h1,.nav{
-            text-align: center;
-            margin-top: 1%;
-        }
-        h1{
-            color: purple;
-            text-shadow:skyblue 0px 0px 2px;
-        }
-       
-            button{
-            height: 50px;
-            width: 50px;
-            margin: auto;
-            background-color: transparent;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            box-shadow: black 0px 0px 5px inset;
-            border-radius: 50%;
-        }
-        .section1{
-            width:60%;
-            height:70%;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 7px;
-            position: relative;
-            box-shadow: black 2px 2px 4px;
-        }
-        .imgContainer{
-            display: flex;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0%;
-            top:0%;
-        }
-        img{
-            height: 100%;
-            width: 100%;
-        }
-        button:hover{
-            cursor: pointer;
-        }
-        button:active{
-            box-shadow:skyblue 0px 0px 10px;
-        }
-        #strt{
-            display: none;
-        }
-        @media only screen and (max-width:1000px){
-            main{
-                width: 600px;
-                height: 343.2px;
-            }
-            button,h1{
-                margin: 2px;
-            }
-        }
-        @media only screen and (max-width:600px){
-            main{
-                width: 300px;
-                height: 183.05px;
-            }
-            h1{
-                font-size: 20px;
-            }
-            button{
-                height: 20px;
-                width: 20px;
-                font-size: 10px;
-            }
-        }
-        @media only screen and (max-width:300px){
-            main{
-                width: 140px;
-                height: 90.53px;
-            }
-            h1{
-                font-size: 10px;
-            }
-            button{
-                width: 10px;
-                height: 10px;
-                font-size: 5px;
-            }
-            .nav,h1{
-                margin-top: 0px;
-            }
-        }
-       
-    
+body{
+  background-color: aliceblue;
+}
+h1{
+  font-family:'Courier New', Courier, monospace ;
+  background:linear-gradient(to right,green,blue,rgb(255, 21, 99));
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+  margin:10px auto;
+}
+main{
+  width: fit-content;
+  padding: 1vw;
+  margin: auto;
+  box-shadow: 0 0 5px black;
+  border-radius: 3px;
+  position: relative;
+}
+section{
+  width: 600px;
+  max-width: 98vw;
+  overflow: hidden;
+}
+.next,.prev{
+  border-radius: 50%;
+  padding: 4px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0,0,0,.4);
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: calc( 50% - 20px );
+}
+.next{
+  right: 0;
+}
+.prev{
+  left: 0;
+}
+.next:active,.prev:active{
+  opacity: .7;
+}
+.roll{
+  display: flex;
+  width: 100%;
+}
+.slide{
+  transition: .3s;
+  width: 100%;
+  animation: s2b .3s reverse linear;
+}
+img{
+  max-width: 98vw;
+}
+p{
+  text-align: center;
+  background-color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes s2b {
+  100%{width: 0%;}
+}
+
+@media only screen and (max-width:600px){
+  .next,.prev{
+    font-size: 14px;
+    cursor: none;
+  }
+}
